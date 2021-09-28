@@ -3,14 +3,14 @@ package com.bridgelabz.addressbook.models;
 public class AddressBookDTO {
 	private String name;
 	private String address;
-	private long phonenumber;
+	private long phoneNumber;
 	
 	
 	public AddressBookDTO(String name, String address, long phonenumber) {
 		super();
 		this.name = name;
 		this.address = address;
-		this.phonenumber = phonenumber;
+		this.phoneNumber = phonenumber;
 	}
 
 
@@ -35,12 +35,12 @@ public class AddressBookDTO {
 
 
 	public long getPhonenumber() {
-		return phonenumber;
+		return phoneNumber;
 	}
 
 
 	public void setPhonenumber(long phonenumber) {
-		this.phonenumber = phonenumber;
+		this.phoneNumber = phonenumber;
 	} 
 	
 	
