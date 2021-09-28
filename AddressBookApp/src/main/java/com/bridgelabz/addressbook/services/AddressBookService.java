@@ -19,15 +19,15 @@ public class AddressBookService implements IAddressBookService{
 	}
 
 	@Override
-	public AddressBookData getById(int contactid) {
-		return addressBookDataList.get(contactid-1);
+	public AddressBookData getById(int id) {
+		return addressBookDataList.get(id-1);
 	}
 
 	@Override
 	public AddressBookData addData(AddressBookDTO addressBookDTO) {
 		int id = addressBookDataList.size()+1;
 		AddressBookData addressBookData = new AddressBookData(id, addressBookDTO);
-		
+		addressBookDataList.add(addressBookData);
 		return addressBookData;
 	}
 
