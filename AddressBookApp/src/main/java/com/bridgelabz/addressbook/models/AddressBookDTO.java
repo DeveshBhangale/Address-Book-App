@@ -14,8 +14,7 @@ public @Data class AddressBookDTO {
 	@NotEmpty(message = "address cannot be empty")
 	private String address;
 
-	@Min(2)
-	@Max(14)
+	@Min(10)
 	private String phoneNumber;
 	
 	

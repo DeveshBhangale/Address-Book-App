@@ -29,7 +29,7 @@ public class AddressBookController {
 	@Autowired
 	public IAddressBookService addressBookService;
 	
-	@RequestMapping({"","/","/get"})
+	@GetMapping({"","/","/get"})
 	public ResponseEntity<ResponseDTO> getAddressBook() {
 		ResponseDTO responseDTO = new ResponseDTO("Address Book success", addressBookService.getAll());
 		log.debug("Address Book success");
