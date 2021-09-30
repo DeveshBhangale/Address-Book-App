@@ -12,7 +12,7 @@ public @Data class AddressBookData {
 	private Integer id;
 	private String name;
 	private String address;
-	private long phoneNumber;
+	private String phoneNumber;
 	
 	public AddressBookData(Integer id,AddressBookDTO addressBookDTO) {
 		super();

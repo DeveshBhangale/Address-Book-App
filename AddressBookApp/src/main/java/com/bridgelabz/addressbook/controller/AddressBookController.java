@@ -18,6 +18,7 @@ import com.bridgelabz.addressbook.models.AddressBookDTO;
 import com.bridgelabz.addressbook.models.ResponseDTO;
 import com.bridgelabz.addressbook.services.IAddressBookService;
 
+import javax.validation.Valid;
 
 
 @RestController
@@ -43,14 +44,14 @@ public class AddressBookController {
 	}
 	
 	@PostMapping("/create")
-	public ResponseEntity<ResponseDTO> createAddressBook( @RequestBody AddressBookDTO addressBookDTO){
+	public ResponseEntity<ResponseDTO> createAddressBook(@Valid @RequestBody AddressBookDTO addressBookDTO){
 		ResponseDTO responseDTO = new ResponseDTO("Created Successfully",addressBookService.addData(addressBookDTO));
 		log.debug("Created Successfully");
 		return new ResponseEntity<ResponseDTO>(responseDTO,HttpStatus.OK);
 	}
 	
 	@PutMapping("/update")
-	public ResponseEntity<ResponseDTO> updateAddressBook(@PathVariable int id,@RequestBody AddressBookDTO addressBookDTO){
+	public ResponseEntity<ResponseDTO> updateAddressBook(@PathVariable int id,@Valid @RequestBody AddressBookDTO addressBookDTO){
 		ResponseDTO responseDTO = new ResponseDTO("Updated Successfully",addressBookService.updateData(id,addressBookDTO));
 		log.debug("Updated Successfully");
 		return new ResponseEntity<ResponseDTO>(responseDTO,HttpStatus.OK);
