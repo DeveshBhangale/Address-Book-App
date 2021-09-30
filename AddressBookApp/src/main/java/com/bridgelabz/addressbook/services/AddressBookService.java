@@ -36,7 +36,7 @@ public class AddressBookService implements IAddressBookService{
 		AddressBookData addressBookData = addressBookDataList.get(id-1);
 		addressBookData.setAddress(addressBookDTO.getAddress());
 		addressBookData.setName(addressBookDTO.getName());
-		addressBookData.setPhoneNumber(addressBookDTO.getPhonenumber());
+		addressBookData.setPhoneNumber(addressBookDTO.getPhoneNumber());
 		addressBookDataList.set(id-1, addressBookData);
 		return addressBookData;
 	}
