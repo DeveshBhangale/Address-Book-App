@@ -13,7 +13,7 @@ public class AddressBookAppApplication {
 		ApplicationContext context=SpringApplication.run(AddressBookAppApplication.class, args);
 		log.info("Employee Payroll App started in {} Environment",
 				context.getEnvironment().getProperty("environment"));
-		
+
 		log.info("Employee Payroll DB user is {} ",
 				context.getEnvironment().getProperty("spring.datasource.username"));
 	}
