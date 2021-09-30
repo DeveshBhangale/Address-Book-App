@@ -1,10 +1,14 @@
 package com.bridgelabz.addressbook.models;
 
-import javax.persistence.Table;
+import lombok.Data;
 
+import javax.persistence.*;
+
+@Entity
 @Table(name="address_book1")
-public class AddressBookData {
-	
+public @Data class AddressBookData {
+	@Id
+	@GeneratedValue(strategy= GenerationType.AUTO)
 	private Integer id;
 	private String name;
 	private String address;
@@ -15,40 +19,8 @@ public class AddressBookData {
 		this.id = id;
 		this.name = addressBookDTO.getName();
 		this.address = addressBookDTO.getAddress();
-		this.phoneNumber = addressBookDTO.getPhonenumber();
+		this.phoneNumber = addressBookDTO.getPhoneNumber();
 	}
 
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public long getPhoneNumber() {
-		return phoneNumber;
-	}
-
-	public void setPhoneNumber(long phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
-	
 	
 }
